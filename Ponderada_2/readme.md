@@ -53,14 +53,28 @@ Os controladores desse projeto são:
             - Entrada: Informações do grupo
             - Saída: Grupo excluído
  - Feedback Controller
+    - Responsabilidades:
+        - Encarregado por cuidar de toda ação em relação as avaliações
+    - Ações
+        - Create: Criação de uma nova avaliação
+            - Entrada: Informações sobre a avaliação
+            - Saída: Resultados da avaliação
+        - Read: Ver os resultados da avaliação
+            - Entrada: id da avaliação
+            - Saída: Resultado da avaliação
+        - Update: Atualizar as avaliações
+            - Entrada: id da avaliação
+            - Saída: Avaliação com as informações atualizadas
+        - Delete: Retirar o Feedback
+            - Entrada: Id da avaliação
+            - Saída: Feedback excluído.
 
-
-- Liste os controladores do seu projeto e suas responsabilidades.
-- Descreva as ações (methods) de cada controlador e seus parâmetros de entrada e saída.
-- Explique como os controladores interagem com os modelos e views.
 
 ### Views (Views):
-- Liste as views do seu projeto e sua função.
+ As views presente no projeto são:
+ - Homepage:
+    - 
+ - Feedback
 
 ### Infraestrutura:
 
