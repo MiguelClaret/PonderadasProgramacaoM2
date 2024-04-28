@@ -1,5 +1,5 @@
 - Nome do Projeto: C³ - Code Conecting Cultures
-- Descrição: [Insira uma breve descrição do seu projeto]
+- Descrição: Uma plataforma web, a qual será utilizada para gerir problemas culturais, diferenças de fuso horário e comunicação entre os membros dos grupos no jogo, por meio abas onde o usuário consegue acessar o perfil de cada integrante do seu grupo, e com isso entender o contexto que cada um vive, e também abas onde o usuário conseguirá avaliar o desempenho dos seus colegas de equipe.
 - Arquitetura: MVC (Model-View-Controller)
 - Ferramenta de Diagramação: draw.io e canva
 
@@ -73,15 +73,25 @@ Os controladores desse projeto são:
 ### Views (Views):
  As views presente no projeto são:
  - Homepage:
-    - 
+    - navbar
+    - profiles
+    - group_members
+    - game_info
+    - game_indicators
+    - logo
  - Feedback
+    - form_questions
+    - submit
+    - my_feedbacks
+    - logo
 
 ### Infraestrutura:
 
-- Descreva os componentes de infraestrutura do seu projeto, como bancos de dados, APIs externas e outras dependências.
-- Explique como a infraestrutura se integra à arquitetura MVC.
-
+Banco de dados SQL, hospedado no render, utilizando a ferramenta DBeaver para manjeno das informações. Sendo essa banco de dados ligado à arquitetura MVC, por meio dos Models
 
 ### Justifique as escolhas feitas e como elas impactam o projeto.
 #### Implicações da Arquitetura:
-Descreva as implicações da arquitetura em termos de escalabilidade, manutenção, testabilidade e outros aspectos importantes
+Ao utilizar a arquitetura MVC ela traz diversos benefícios, como:
+- Reutilização de códigos.
+- Facilidade na manutenção, pois há uma divisão específica para cada funcionalidade, tornando-a mais fácil de ser mantida.
+- Testabilidade, pois a divisão em partes específicas facilita os testes, permitindo testar cada parte separadamente.
