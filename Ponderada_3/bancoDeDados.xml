@@ -42,25 +42,25 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="birthday" null="1" autoincrement="0">
 <datatype>DATE</datatype>
 <default>NULL</default></row>
 <row name="country" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="pronouns" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="email" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="password" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="university" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -90,7 +90,7 @@
 <datatype>INT</datatype>
 <default>NULL</default></row>
 <row name="profile_type" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="profile_photo_svg" null="1" autoincrement="0">
 <datatype>MEDIUMTEXT</datatype>
@@ -104,7 +104,7 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="name" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="tutor_id" null="1" autoincrement="0">
 <datatype>INT</datatype>
@@ -140,18 +140,18 @@
 <part>id</part>
 </key>
 </table>
-<table x="857.3333339691162" y="372" name="question">
+<table x="857" y="372" name="question">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
 <row name="question_text" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="alternatives" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="question_type" null="1" autoincrement="0">
-<datatype>VARCHAR</datatype>
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -169,7 +169,7 @@
 <default>NULL</default><relation table="user" row="id" />
 </row>
 <row name="date" null="1" autoincrement="0">
-<datatype>DATE</datatype>a
+<datatype>DATE</datatype>
 <default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>

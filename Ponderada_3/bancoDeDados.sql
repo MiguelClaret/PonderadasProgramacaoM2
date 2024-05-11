@@ -10,17 +10,15 @@
 -- 
 -- ---
 
-DROP TABLE IF EXISTS "user";
-		
-CREATE TABLE "user" (
+CREATE TABLE IF NOT EXISTS "user" (
   "id" SERIAL PRIMARY KEY,
-  "name" VARCHAR,
+  "name" TEXT,
   "birthday" DATE,
-  "country" VARCHAR,
-  "pronouns" VARCHAR,
-  "email" VARCHAR,
-  "password" VARCHAR,
-  "university" VARCHAR
+  "country" TEXT,
+  "pronouns" TEXT,
+  "email" TEXT,
+  "password" TEXT,
+  "university" TEXT
 );
 
 -- ---
@@ -28,9 +26,7 @@ CREATE TABLE "user" (
 -- 
 -- ---
 
-DROP TABLE IF EXISTS "tutor";
-		
-CREATE TABLE "tutor" (
+CREATE TABLE IF NOT EXISTS "tutor" (
   "id" SERIAL PRIMARY KEY,
   "user_id" INTEGER REFERENCES "user" ("id")
 );
@@ -40,14 +36,24 @@ CREATE TABLE "tutor" (
 -- 
 -- ---
 
-DROP TABLE IF EXISTS "student";
-		
-CREATE TABLE "student" (
+CREATE TABLE IF NOT EXISTS "student" (
   "id" SERIAL PRIMARY KEY,
   "user_id" INTEGER REFERENCES "user" ("id"),
-  "happiness_meter" INT,
-  "profile_type" VARCHAR,
+  "happiness_meter" INTEGER,
+  "profile_type" TEXT,
   "profile_photo_svg" TEXT
+);
+
+-- ---
+-- Table 'question'
+-- 
+-- ---
+
+CREATE TABLE IF NOT EXISTS "question" (
+  "id" SERIAL PRIMARY KEY,
+  "question_text" TEXT,
+  "alternatives" TEXT,
+  "question_type" TEXT
 );
 
 -- ---
@@ -55,11 +61,9 @@ CREATE TABLE "student" (
 -- 
 -- ---
 
-DROP TABLE IF EXISTS "Team";
-		
-CREATE TABLE "Team" (
+CREATE TABLE IF NOT EXISTS "Team" (
   "id" SERIAL PRIMARY KEY,
-  "name" VARCHAR,
+  "name" TEXT,
   "tutor_id" INTEGER REFERENCES "tutor" ("id"),
   "student_id" INTEGER REFERENCES "student" ("id")
 );
@@ -69,9 +73,7 @@ CREATE TABLE "Team" (
 -- 
 -- ---
 
-DROP TABLE IF EXISTS "questionAnswer";
-		
-CREATE TABLE "questionAnswer" (
+CREATE TABLE IF NOT EXISTS "questionAnswer" (
   "id" SERIAL PRIMARY KEY,
   "student_id" INTEGER REFERENCES "user" ("id"),
   "question_id" INTEGER REFERENCES "question" ("id"),
@@ -80,27 +82,11 @@ CREATE TABLE "questionAnswer" (
 );
 
 -- ---
--- Table 'question'
--- 
--- ---
-
-DROP TABLE IF EXISTS "question";
-		
-CREATE TABLE "question" (
-  "id" SERIAL PRIMARY KEY,
-  "question_text" VARCHAR,
-  "alternatives" VARCHAR,
-  "question_type" VARCHAR
-);
-
--- ---
 -- Table 'message'
 -- 
 -- ---
 
-DROP TABLE IF EXISTS "message";
-		
-CREATE TABLE "message" (
+CREATE TABLE IF NOT EXISTS "message" (
   "id" SERIAL PRIMARY KEY,
   "content" TEXT,
   "user_id" INTEGER REFERENCES "user" ("id"),
